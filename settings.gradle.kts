@@ -13,6 +13,6 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "EnergyMonitor"
-include(":app")
-include(":energymonitor")
+rootProject.name = "paan-android-sensor"
+include(":android-testapp")
+include(":android-sensor")
