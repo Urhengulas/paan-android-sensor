@@ -8,6 +8,7 @@ import org.mongodb.kbson.BsonObjectId
 import org.mongodb.kbson.ObjectId
 
 
+// TODO: aggregate data from multiple devices, question is how to differentiate
 class Energy() : AsymmetricRealmObject {
     @PrimaryKey
     private var _id: ObjectId = BsonObjectId()

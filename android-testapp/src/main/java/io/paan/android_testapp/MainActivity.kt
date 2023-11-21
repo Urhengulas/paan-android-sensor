@@ -1,6 +1,7 @@
 package io.paan.android_testapp
 
 import android.os.Bundle
+import android.util.Log
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.compose.foundation.layout.fillMaxSize
@@ -29,12 +30,17 @@ class MainActivity : ComponentActivity() {
                 }
             }
         }
-        energyMonitor = EnergyMonitor(
-            applicationContext,
-            // db id and key are set in app/src/main/res/values/config.xml
-            getString(R.string.db_id),
-            getString(R.string.db_key),
-        )
+        try {
+            energyMonitor = EnergyMonitor(
+                applicationContext,
+                // db id and key are set in app/src/main/res/values/config.xml
+                getString(R.string.db_id),
+                getString(R.string.db_key),
+            )
+        } catch (e: Exception) {
+            Log.e("TESTAPP", e.toString())
+        }
+
     }
 }
 
