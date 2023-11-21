@@ -1,4 +1,4 @@
-package io.paan.energymonitor.ui.theme
+package io.paan.energymonitorapp.ui.theme
 
 import android.app.Activity
 import android.os.Build

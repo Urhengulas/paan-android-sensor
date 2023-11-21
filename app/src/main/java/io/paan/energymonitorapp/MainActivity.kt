@@ -1,4 +1,4 @@
-package io.paan.energymonitor
+package io.paan.energymonitorapp
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
@@ -10,9 +10,13 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
-import io.paan.energymonitor.ui.theme.EnergyMonitorTheme
+import com.emission_meter.demo.energy_monitor.EnergyMonitor
+//import io.paan.energymonitor.EnergyMonitor
+import io.paan.energymonitorapp.ui.theme.EnergyMonitorTheme
 
 class MainActivity : ComponentActivity() {
+    lateinit var energyMonitor: EnergyMonitor
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
