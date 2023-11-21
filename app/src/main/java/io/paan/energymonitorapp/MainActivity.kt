@@ -10,12 +10,11 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
-import com.emission_meter.demo.energy_monitor.EnergyMonitor
-//import io.paan.energymonitor.EnergyMonitor
+import io.paan.energymonitor.EnergyMonitor
 import io.paan.energymonitorapp.ui.theme.EnergyMonitorTheme
 
 class MainActivity : ComponentActivity() {
-    lateinit var energyMonitor: EnergyMonitor
+    private val energyMonitor = EnergyMonitor(applicationContext, "", "")
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -30,6 +29,7 @@ class MainActivity : ComponentActivity() {
                 }
             }
         }
+        energyMonitor.run()
     }
 }
 
