@@ -1,5 +1,6 @@
 plugins {
     id("com.android.library")
+    id("io.realm.kotlin") version "1.8.0"
     id("org.jetbrains.kotlin.android")
 }
 

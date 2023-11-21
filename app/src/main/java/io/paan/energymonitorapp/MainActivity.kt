@@ -14,7 +14,7 @@ import io.paan.energymonitor.EnergyMonitor
 import io.paan.energymonitorapp.ui.theme.EnergyMonitorTheme
 
 class MainActivity : ComponentActivity() {
-    private val energyMonitor = EnergyMonitor(applicationContext, "", "")
+    private lateinit var energyMonitor: EnergyMonitor
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -29,7 +29,11 @@ class MainActivity : ComponentActivity() {
                 }
             }
         }
-        energyMonitor.run()
+        energyMonitor = EnergyMonitor(
+            applicationContext,
+            "energymeasurements-xjoze",
+            "ktSm7GdGAvctv6szOnoBlXhlXkF7lLB5uUoiBNiKrqtLG7bfwiduHJCaxkZxnXFR"
+        )
     }
 }
 

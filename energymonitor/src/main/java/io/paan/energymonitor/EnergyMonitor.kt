@@ -22,9 +22,10 @@ class EnergyMonitor(
 
     init {
         Log.d(TAG, "Initialized Energy Monitor")
+        run()
     }
 
-    fun run() = CoroutineScope(Dispatchers.Default).launch {
+    private fun run() = CoroutineScope(Dispatchers.Default).launch {
         while (true) {
             try {
                 // measure data
