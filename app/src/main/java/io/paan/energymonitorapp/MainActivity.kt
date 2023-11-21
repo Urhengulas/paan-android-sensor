@@ -11,6 +11,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import io.paan.energymonitor.EnergyMonitor
+import io.paan.energymonitor.R
 import io.paan.energymonitorapp.ui.theme.EnergyMonitorTheme
 
 class MainActivity : ComponentActivity() {
@@ -31,8 +32,9 @@ class MainActivity : ComponentActivity() {
         }
         energyMonitor = EnergyMonitor(
             applicationContext,
-            "energymeasurements-xjoze",
-            "ktSm7GdGAvctv6szOnoBlXhlXkF7lLB5uUoiBNiKrqtLG7bfwiduHJCaxkZxnXFR"
+            // db id and key are set in app/src/main/res/values/config.xml
+            getString(R.string.db_id),
+            getString(R.string.db_key),
         )
     }
 }
