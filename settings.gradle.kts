@@ -15,4 +15,4 @@ dependencyResolutionManagement {
 
 rootProject.name = "EnergyMonitor"
 include(":app")
- 
+include(":energymonitor")
